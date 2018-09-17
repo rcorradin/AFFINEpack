@@ -6,55 +6,114 @@
 
 using namespace Rcpp;
 
-// rcpparma_hello_world
-arma::mat rcpparma_hello_world();
-RcppExport SEXP _AFFINEpack_rcpparma_hello_world() {
+// marginal_DP_multi_indep_dep
+Rcpp::List marginal_DP_multi_indep_dep(int nsim, int nburn, int napprox, int d, arma::mat data, arma::mat grid, arma::vec conf_start, arma::vec mu_start, arma::mat Lambda_start, double theta, arma::vec m0, arma::mat B0, double nu0, arma::mat sigma, int b1, arma::mat B1, arma::vec m1, double k1, double t1, double t2, int nupd, bool FIX);
+RcppExport SEXP _AFFINEpack_marginal_DP_multi_indep_dep(SEXP nsimSEXP, SEXP nburnSEXP, SEXP napproxSEXP, SEXP dSEXP, SEXP dataSEXP, SEXP gridSEXP, SEXP conf_startSEXP, SEXP mu_startSEXP, SEXP Lambda_startSEXP, SEXP thetaSEXP, SEXP m0SEXP, SEXP B0SEXP, SEXP nu0SEXP, SEXP sigmaSEXP, SEXP b1SEXP, SEXP B1SEXP, SEXP m1SEXP, SEXP k1SEXP, SEXP t1SEXP, SEXP t2SEXP, SEXP nupdSEXP, SEXP FIXSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
+    Rcpp::traits::input_parameter< int >::type nsim(nsimSEXP);
+    Rcpp::traits::input_parameter< int >::type nburn(nburnSEXP);
+    Rcpp::traits::input_parameter< int >::type napprox(napproxSEXP);
+    Rcpp::traits::input_parameter< int >::type d(dSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type data(dataSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type grid(gridSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type conf_start(conf_startSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type mu_start(mu_startSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type Lambda_start(Lambda_startSEXP);
+    Rcpp::traits::input_parameter< double >::type theta(thetaSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type m0(m0SEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type B0(B0SEXP);
+    Rcpp::traits::input_parameter< double >::type nu0(nu0SEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type sigma(sigmaSEXP);
+    Rcpp::traits::input_parameter< int >::type b1(b1SEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type B1(B1SEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type m1(m1SEXP);
+    Rcpp::traits::input_parameter< double >::type k1(k1SEXP);
+    Rcpp::traits::input_parameter< double >::type t1(t1SEXP);
+    Rcpp::traits::input_parameter< double >::type t2(t2SEXP);
+    Rcpp::traits::input_parameter< int >::type nupd(nupdSEXP);
+    Rcpp::traits::input_parameter< bool >::type FIX(FIXSEXP);
+    rcpp_result_gen = Rcpp::wrap(marginal_DP_multi_indep_dep(nsim, nburn, napprox, d, data, grid, conf_start, mu_start, Lambda_start, theta, m0, B0, nu0, sigma, b1, B1, m1, k1, t1, t2, nupd, FIX));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpparma_outerproduct
-arma::mat rcpparma_outerproduct(const arma::colvec& x);
-RcppExport SEXP _AFFINEpack_rcpparma_outerproduct(SEXP xSEXP) {
+// marginal_DP_multi_indep_indep
+Rcpp::List marginal_DP_multi_indep_indep(int nsim, int nburn, int napprox, int d, arma::mat data, arma::mat grid, arma::vec conf_start, arma::vec mu_start, arma::mat Lambda_start, double theta, arma::vec m0, arma::mat B0, double nu0, arma::mat sigma, int b1, arma::mat B1, arma::vec m1, arma::mat M1, int s1, arma::mat S1, double t1, double t2, int nupd, bool FIX);
+RcppExport SEXP _AFFINEpack_marginal_DP_multi_indep_indep(SEXP nsimSEXP, SEXP nburnSEXP, SEXP napproxSEXP, SEXP dSEXP, SEXP dataSEXP, SEXP gridSEXP, SEXP conf_startSEXP, SEXP mu_startSEXP, SEXP Lambda_startSEXP, SEXP thetaSEXP, SEXP m0SEXP, SEXP B0SEXP, SEXP nu0SEXP, SEXP sigmaSEXP, SEXP b1SEXP, SEXP B1SEXP, SEXP m1SEXP, SEXP M1SEXP, SEXP s1SEXP, SEXP S1SEXP, SEXP t1SEXP, SEXP t2SEXP, SEXP nupdSEXP, SEXP FIXSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
+    Rcpp::traits::input_parameter< int >::type nsim(nsimSEXP);
+    Rcpp::traits::input_parameter< int >::type nburn(nburnSEXP);
+    Rcpp::traits::input_parameter< int >::type napprox(napproxSEXP);
+    Rcpp::traits::input_parameter< int >::type d(dSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type data(dataSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type grid(gridSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type conf_start(conf_startSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type mu_start(mu_startSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type Lambda_start(Lambda_startSEXP);
+    Rcpp::traits::input_parameter< double >::type theta(thetaSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type m0(m0SEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type B0(B0SEXP);
+    Rcpp::traits::input_parameter< double >::type nu0(nu0SEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type sigma(sigmaSEXP);
+    Rcpp::traits::input_parameter< int >::type b1(b1SEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type B1(B1SEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type m1(m1SEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type M1(M1SEXP);
+    Rcpp::traits::input_parameter< int >::type s1(s1SEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type S1(S1SEXP);
+    Rcpp::traits::input_parameter< double >::type t1(t1SEXP);
+    Rcpp::traits::input_parameter< double >::type t2(t2SEXP);
+    Rcpp::traits::input_parameter< int >::type nupd(nupdSEXP);
+    Rcpp::traits::input_parameter< bool >::type FIX(FIXSEXP);
+    rcpp_result_gen = Rcpp::wrap(marginal_DP_multi_indep_indep(nsim, nburn, napprox, d, data, grid, conf_start, mu_start, Lambda_start, theta, m0, B0, nu0, sigma, b1, B1, m1, M1, s1, S1, t1, t2, nupd, FIX));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpparma_innerproduct
-double rcpparma_innerproduct(const arma::colvec& x);
-RcppExport SEXP _AFFINEpack_rcpparma_innerproduct(SEXP xSEXP) {
+// find_part
+Rcpp::List find_part(arma::mat clust_mat);
+RcppExport SEXP _AFFINEpack_find_part(SEXP clust_matSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
+    Rcpp::traits::input_parameter< arma::mat >::type clust_mat(clust_matSEXP);
+    rcpp_result_gen = Rcpp::wrap(find_part(clust_mat));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpparma_bothproducts
-Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
-RcppExport SEXP _AFFINEpack_rcpparma_bothproducts(SEXP xSEXP) {
+// pairwise_mat
+Rcpp::List pairwise_mat(arma::mat clust_mat);
+RcppExport SEXP _AFFINEpack_pairwise_mat(SEXP clust_matSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
+    Rcpp::traits::input_parameter< arma::mat >::type clust_mat(clust_matSEXP);
+    rcpp_result_gen = Rcpp::wrap(pairwise_mat(clust_mat));
+    return rcpp_result_gen;
+END_RCPP
+}
+// est_ISE_2D
+double est_ISE_2D(arma::vec estimated, arma::vec teoric, arma::mat grid);
+RcppExport SEXP _AFFINEpack_est_ISE_2D(SEXP estimatedSEXP, SEXP teoricSEXP, SEXP gridSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::vec >::type estimated(estimatedSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type teoric(teoricSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type grid(gridSEXP);
+    rcpp_result_gen = Rcpp::wrap(est_ISE_2D(estimated, teoric, grid));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_AFFINEpack_rcpparma_hello_world", (DL_FUNC) &_AFFINEpack_rcpparma_hello_world, 0},
-    {"_AFFINEpack_rcpparma_outerproduct", (DL_FUNC) &_AFFINEpack_rcpparma_outerproduct, 1},
-    {"_AFFINEpack_rcpparma_innerproduct", (DL_FUNC) &_AFFINEpack_rcpparma_innerproduct, 1},
-    {"_AFFINEpack_rcpparma_bothproducts", (DL_FUNC) &_AFFINEpack_rcpparma_bothproducts, 1},
+    {"_AFFINEpack_marginal_DP_multi_indep_dep", (DL_FUNC) &_AFFINEpack_marginal_DP_multi_indep_dep, 22},
+    {"_AFFINEpack_marginal_DP_multi_indep_indep", (DL_FUNC) &_AFFINEpack_marginal_DP_multi_indep_indep, 24},
+    {"_AFFINEpack_find_part", (DL_FUNC) &_AFFINEpack_find_part, 1},
+    {"_AFFINEpack_pairwise_mat", (DL_FUNC) &_AFFINEpack_pairwise_mat, 1},
+    {"_AFFINEpack_est_ISE_2D", (DL_FUNC) &_AFFINEpack_est_ISE_2D, 3},
     {NULL, NULL, 0}
 };
 
